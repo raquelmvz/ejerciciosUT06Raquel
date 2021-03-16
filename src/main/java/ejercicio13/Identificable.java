@@ -10,9 +10,13 @@ package ejercicio13;
  * @author raquel
  */
 public interface Identificable {
-    
-//    public default void identificate() {
-//        System.out.println();
-//    }
-    
+
+    public default void identificate() {
+        if (this instanceof Profesor) {
+            System.out.println("Profesor");
+        } else if (this instanceof Estudiante) {
+            System.out.println("Estudiante");
+        }
+    }
+
 }
